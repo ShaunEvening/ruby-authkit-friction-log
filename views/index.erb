@@ -1,0 +1,14 @@
+<h1>AuthKit authentication example</h1>
+<% if @user %>
+  <p>Welcome back, <%= @user[:first_name] %></p>
+  <div>
+    <form action="/logout" method="get">
+      <button type="submit">Sign out</button>
+    </form>
+  </div>
+<% else %>
+  <p>Sign in to view your account details</p>
+  <a href="/login">
+    <button>Sign in with AuthKit</button>
+  </a>
+<% end %>
